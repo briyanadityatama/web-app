@@ -7,9 +7,18 @@ class Home {
   }
 
   index(req, res) {
+    // Data processing here
+    const people = {
+      foo: 'Foo',
+      bar: 'Bar',
+    };
+
     res.marko(indexTpl, {
-      title: 'Hello World!'
-    })
+      title: 'Hello World!',
+      data: {
+        people: people,
+      },
+    });
   }
 }
 
