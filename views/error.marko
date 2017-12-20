@@ -1,0 +1,12 @@
+<include('./layout.marko', data)>
+  <@body>
+    <section id="errors" class="ui segment">
+      <div class="container">
+        <h1>Oops!</h1>
+        <p style="color: white">
+          ${data.code}
+        </p>
+      </div>
+    </section>
+  </@body>
+</include>

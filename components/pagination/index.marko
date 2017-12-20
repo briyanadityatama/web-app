@@ -1,0 +1,19 @@
+<div class="ui form bo-pagination">
+  <div class="inline fields">
+    <div class="field">
+      <select class="ui compact selection dropdown item pagelist">
+        <for(page in data.data.list)>
+          $ var selectedClass = page.number === data.data.page ? ' selected' : '';
+          $ var value = page.number !== data.data.page ? ' value="' + page.url + '"': '';
+          <option ${value} ${selectedClass}>Page ${page.number}</option>
+        </for>
+      </select>
+    </div>
+    <div class="field">
+      <div class="ui buttons basic">
+        <button if(data.data.prev) class="ui button" data-url="${data.data.prev}">Prev</button>
+        <button if(data.data.next) class="ui button" data-url="${data.data.next}" >Next</button>
+      </div>
+    </div>
+  </div>
+</div>
